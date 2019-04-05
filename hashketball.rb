@@ -199,13 +199,13 @@ end
 ########################
 
 def most_points_scored
-  players_points = ""
+  players_name = ""
   players_score = 0
 
   game_hash[:home][:players].each do |player_name, value|
     if value[:points] > players_score
       players_score = value[:points]
-      player_with_big_feet = player_name
+      players_name = player_name
     end
     game_hash[:home][:players].each do |player_name, value|
       if value[:shoe] > biggest_shoe
