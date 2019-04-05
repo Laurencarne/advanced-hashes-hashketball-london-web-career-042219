@@ -231,8 +231,7 @@ def winning_team
   end
   away_team.each {|n| away_team_total +=n}
   home_team.each {|n| home_team_total +=n}
-  puts home_team_total
-  puts away_team_total
+  "#{home_team_total}, #{away_team_total}"
 end
 
 def player_with_longest_name
