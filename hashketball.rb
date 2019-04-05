@@ -231,7 +231,6 @@ def winning_team
   end
   away_team.each {|n| away_team_total +=n}
   home_team.each {|n| home_team_total +=n}
-  "#{home_team_total}, #{away_team_total}"
   if home_team_total > away_team_total
     game_hash[:home].key[1]
   else
