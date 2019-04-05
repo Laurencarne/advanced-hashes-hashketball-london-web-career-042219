@@ -218,7 +218,7 @@ def most_points_scored
 end
 
 def winning_team
-  
+
 end
 
 def player_with_longest_name
@@ -284,4 +284,3 @@ def player_biggest_shoe_size
   players.max_by{|player, stats| stats.fetch(:shoe)}[1]
   binding.pry
 end
-
