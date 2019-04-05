@@ -194,6 +194,41 @@ def big_shoe_rebounds
     game_hash[:away][:players][player_with_big_feet][:rebounds]
   end
 end
+########################
+########BONUS###########
+########################
+
+def most_points_scored
+  players_points = ""
+  players_score = 0
+
+  game_hash[:home][:players].each do |player_name, value|
+    if value[:points] > players_score
+      players_score = value[:points]
+      player_with_big_feet = player_name
+    end
+    game_hash[:home][:players].each do |player_name, value|
+      if value[:shoe] > biggest_shoe
+        biggest_shoe = value[:shoe]
+        player_with_big_feet = player_name
+      end
+    end
+  end
+  if game_hash[:home][:players].include?(player_with_big_feet)
+    game_hash[:home][:players][player_with_big_feet][:rebounds]
+  elsif game_hash[:away][:players].include?(player_with_big_feet)
+    game_hash[:away][:players][player_with_big_feet][:rebounds]
+  end
+end
+
+def winning_team
+end
+
+def player_with_longest_name
+end
+
+def long_name_steals_a_ton
+end
 
 #############################
 #############################
