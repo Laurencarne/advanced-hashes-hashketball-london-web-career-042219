@@ -227,7 +227,7 @@ def winning_team
     home_team << value[:points]
     home_team_total.each {|n| home_team_total =+n}
   end
-  home_team
+  home_team_total
 end
 
 def player_with_longest_name
