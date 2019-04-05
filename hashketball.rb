@@ -207,18 +207,14 @@ def most_points_scored
       players_score = value[:points]
       players_name = player_name
     end
-    game_hash[:home][:players].each do |player_name, value|
-      if value[:shoe] > biggest_shoe
-        biggest_shoe = value[:shoe]
-        player_with_big_feet = player_name
+    game_hash[:away][:players].each do |player_name, value|
+      if value[:points] > players_score
+        players_score = value[:points]
+        players_name = player_name
       end
     end
   end
-  if game_hash[:home][:players].include?(player_with_big_feet)
-    game_hash[:home][:players][player_with_big_feet][:rebounds]
-  elsif game_hash[:away][:players].include?(player_with_big_feet)
-    game_hash[:away][:players][player_with_big_feet][:rebounds]
-  end
+  players_name
 end
 
 def winning_team
