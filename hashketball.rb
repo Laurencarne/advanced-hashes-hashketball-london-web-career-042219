@@ -232,9 +232,9 @@ def winning_team
   away_team.each {|n| away_team_total +=n}
   home_team.each {|n| home_team_total +=n}
   if home_team_total > away_team_total
-    game_hash[:home].key[1]
+    game_hash[:home].key
   else
-    game_hash[:away].key[1]
+    game_hash[:away].key
 end
 end
 
