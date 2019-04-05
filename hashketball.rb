@@ -225,7 +225,7 @@ def winning_team
 
   game_hash[:home][:players].each do |player_name, value|
     home_team << value[:points]
-    home_team_total.each {|n| home_team_total =+n}
+    home_team.each {|n| home_team_total =+n}
   end
   home_team_total
 end
